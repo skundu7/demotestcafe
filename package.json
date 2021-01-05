@@ -1,0 +1,34 @@
+{
+  "name": "testcafe_demo",
+  "version": "1.0.0",
+  "description": "Demo for Testcafe tool",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "testcafe chrome ./tests -s takeOnFails =true --reporter minimal",
+    "test:chrome:5": "testcafe -c 5 chrome ./tests -s takeOnFails =true",
+    "test:chrome:headless:5": "testcafe -c 5 chrome:headless ./tests -s takeOnFails=true",
+    "test:safari": "testcafe safari tests/login.test.js -s takeOnFails=true --disable-page-caching",
+    "test:firefox": "testcafe firefox tests/login.test.js -s takeOnFails=true --disable-page-caching",
+    "test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails =true",
+    "test:chrome:mobile": "testcafe chrome:emulation:device=iphone X ./tests",
+    "test:multiple": "testcafe chrome,firefox ./tests -s takeOnFails=true"
+  },
+  "keywords": [
+    "TestCafe",
+    "Testing",
+    "Automation"
+  ],
+  "author": "Sunil Kundu",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^1.19.1",
+    "testcafe": "^1.8.2",
+    "testcafe-reporter-json": "^2.2.0",
+    "testcafe-reporter-list": "^2.1.0",
+    "testcafe-reporter-minimal": "^2.1.0",
+    "testcafe-reporter-nunit": "^0.1.2",
+    "testcafe-reporter-tesults": "^1.0.0",
+    "testcafe-reporter-xunit": "^2.1.0",
+    "xpath-to-css": "^1.0.4"
+  }
+}
